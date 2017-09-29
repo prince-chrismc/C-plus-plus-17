@@ -1,6 +1,9 @@
 # C-plus-plus-17
 This is an exploration repository to dabble with C++1z using the g++-7 compiler running Linux Mint 18.1
 
+## Attribution
+Thank you to [this](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md) pages contributors.
+
 ## System Setup
 1. Installing the latest compilers
 ```bash
