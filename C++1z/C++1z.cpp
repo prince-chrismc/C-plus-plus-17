@@ -12,7 +12,6 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 // Folding Expression
 template<typename... Args>
@@ -21,13 +20,33 @@ bool logicalAnd(Args... args) {
     return (true && ... && args);
 }
 
-int main(void) {
-	puts("Hello World!!!");
+// constexpr lambda
+constexpr auto add = [] (int x, int y) {
+  auto L = [=] { return x; };
+  auto R = [=] { return y; };
+  return [=] { return L() + R(); };
+};
 
+int main(void) {
+	printf("Hello World!!!\n");
+
+	printf("Trying folding expressions...\n");
 	bool b = true;
 	bool& b2 = b;
-	logicalAnd(b, b2, true); // == true
+	bool result = logicalAnd(b, b2, true); // == true
+	if(logicalAnd(result))
+	{
+		printf("result == true\n");
+	}
+	else
+	{
+		printf("result == false\n");
+	}
 
+	if(add(1, 2)() == 3)
+	{
+		printf("1 + 2 == 3 =D\n");
+	}
 
-	return EXIT_SUCCESS;
+	return 1;
 }
