@@ -15,11 +15,4 @@ sudo apt-get install g++-7
 2. Install Eclipse C++ (Im using Oxygen)
 3. File -> New -> Project -> C++ -> C++ Project -> Next -> Makefile Project -> Hello World -> Linux GCC -> Finish
 4. Modify Makefile
-```Makefile
-$(TARGET):	$(OBJS)
-	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
-====================================================
-$(TARGET):	$(OBJS)
-	g++-7 -o $(TARGET) $(OBJS) $(LIBS)
-```
 5. Build project
