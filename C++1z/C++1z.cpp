@@ -15,6 +15,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include "stdafx.h"
 namespace fs = std::filesystem;
 
 // Folding Expression
